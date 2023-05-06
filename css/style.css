@@ -55,19 +55,6 @@ html {
   color: var(--color-1);
 }
 
-/* .navbar .btn-resume {
-  padding: 0.7rem;
-  background-color: var(--color-1);
-  color: var(--color-5);
-  cursor: pointer;
-  border-radius: 5px;
-  transition: all 0.3s;
-}
-
-.navbar .btn-resume:hover {
-  background-color: var(--color-2);
-} */
-
 .navbar .navbar-extra a {
   color: var(--color-1);
 }
@@ -138,7 +125,7 @@ html {
 .hero .content .btn-project {
   margin-top: 2rem;
   display: inline-block;
-  padding: 1rem 3rem;
+  padding: 1rem 1.5rem;
   background-color: var(--color-1);
   border-radius: 0.5rem;
   color: var(--color-5);
@@ -154,7 +141,9 @@ html {
 
 /* about */
 .about,
-.project {
+.project,
+.contact,
+.footer {
   padding: 8rem 7% 1.4rem;
 }
 
@@ -167,8 +156,17 @@ html {
   color: var(--color-2);
 }
 
+.contact h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-family: var(--font-2);
+  color: var(--color-2);
+}
+
 .about span,
-.project span {
+.project span,
+.contact span {
   color: var(--color-1);
 }
 
@@ -198,13 +196,149 @@ html {
   font-family: var(--font-1);
   color: var(--color-1);
 }
+
+.about .row .about-content ul li {
+  list-style: none;
+  font-size: 1.2rem;
+  font-family: var(--font-1);
+  color: var(--color-1);
+  line-height: 1.6;
+  font-weight: 300;
+}
 /* about */
+
+/* project */
+.project .row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.project .row .project-img {
+  flex: 1 1 45rem;
+}
+
+.project .row .project-img img {
+  width: 100%;
+}
+
+.project .row .project-content {
+  flex: 1 1 30rem;
+  text-align: end;
+  padding-left: 3rem;
+}
+
+.project .row .project-content.dua {
+  text-align: start;
+  padding: 0 3rem 0 0;
+}
+
+.project .row .project-content p {
+  font-family: var(--font-2);
+  font-size: 1.2rem;
+  color: var(--color-1);
+  margin-bottom: 1rem;
+}
+
+.project .row .project-content h3 {
+  font-family: var(--font-1);
+  font-size: 2.5rem;
+  color: var(--color-2);
+  margin-bottom: 1.5rem;
+}
+
+.project .row .project-content .box-title {
+  padding: 2rem 1rem;
+  background-color: var(--color-1);
+  color: var(--color-5);
+  border-radius: 0.5rem;
+  z-index: 1;
+  font-size: 1rem;
+  font-family: var(--font-1);
+  line-height: 1.6;
+}
+
+.project .row .project-content ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 1rem 1rem 2rem 1rem;
+  font-family: var(--font-2);
+  font-size: 1rem;
+  color: var(--color-1);
+}
+
+.project .row .project-content .icons a {
+  padding-left: 1rem;
+  color: var(--color-1);
+  transition: 0.3s;
+}
+
+.project .row .project-content .icons a:hover {
+  color: var(--color-2);
+}
+/* project */
+
+/* contact */
+.contact .row-contact {
+  text-align: center;
+}
+
+.contact .row-contact .contact-title {
+  width: 40rem;
+  margin: auto;
+  font-family: var(--font-1);
+  color: var(--color-1);
+  line-height: 1.6;
+  padding-bottom: 4rem;
+  font-size: 1.2rem;
+}
+
+.contact .row-contact .btn-contact {
+  padding: 1rem 1.5rem;
+  background-color: var(--color-1);
+  color: var(--color-5);
+  border-radius: 0.5rem;
+  font-family: var(--font-2);
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.contact .row-contact .btn-contact:hover {
+  background-color: var(--color-2);
+}
+/* contact */
+
+/* footer */
+.footer .row-footer {
+  text-align: center;
+}
+
+.footer .row-footer .icons-sosmed {
+  margin-bottom: 1rem;
+}
+
+.footer .row-footer .icons-sosmed a {
+  color: var(--color-2);
+  margin: 0 0.5rem;
+  transition: 0.3s;
+}
+
+.footer .row-footer .icons-sosmed a:hover {
+  color: var(--color-1);
+}
+
+.footer .row-footer .footer-title p {
+  font-size: 1rem;
+  font-family: var(--font-2);
+  color: var(--color-2);
+}
+/* footer */
 
 /* Media Queries */
 /* Laptop */
 @media (max-width: 1366px) {
   html {
-    font-size: 80%;
+    font-size: 75%;
   }
 }
 
@@ -269,6 +403,52 @@ html {
   .about .row .about-content p {
     font-size: 1.5rem;
   }
+
+  .project .row {
+    flex-wrap: wrap;
+  }
+
+  .project .row .project-content {
+    flex: 1 1 35rem;
+    text-align: end;
+    padding-left: 0;
+  }
+
+  .project .row .project-content.dua {
+    flex: 1 1 35rem;
+    text-align: start;
+    padding-right: 0;
+  }
+
+  .project .row .project-img {
+    order: 1;
+  }
+
+  .project .row .project-content {
+    order: 2;
+    margin-top: 2.5rem;
+  }
+
+  .project .row .project-content.dua {
+    order: 2;
+    margin-top: 2.5rem;
+  }
+
+  .project .row .project-content p {
+    font-size: 1.5rem;
+  }
+
+  .project .row .project-content h3 {
+    font-size: 3rem;
+  }
+
+  .project .row .project-content .box-title {
+    font-size: 1.5rem;
+  }
+
+  .project .row .project-content ul li {
+    font-size: 1.5rem;
+  }
 }
 
 /* Mobile Phone */
@@ -278,7 +458,7 @@ html {
   }
 
   .hero {
-    min-height: 60vh;
+    min-height: 65vh;
   }
 
   .hero .content .text-1 {

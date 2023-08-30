@@ -386,6 +386,10 @@ html {
     min-height: 90vh;
   }
 
+  .about {
+    padding: 1.4rem 7%;
+  }
+
   .about .row {
     flex-wrap: wrap;
   }
@@ -448,6 +452,10 @@ html {
 
   .project .row .project-content ul li {
     font-size: 1.5rem;
+  }
+
+  .contact {
+    padding: 1.4rem 7%;
   }
 }
 
